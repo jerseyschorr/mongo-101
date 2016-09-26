@@ -1,0 +1,4 @@
+{
+  "extends": "clock",
+  "disallowIdLiterals": false
+}

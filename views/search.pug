@@ -1,0 +1,49 @@
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/assets/css/main.css')
+  body
+    header#header
+      .inner
+        a.logo(href='index.html')= title
+        nav#nav
+          a(href='/index.html') Home
+          | |
+          a(href='/search.html') Search
+        a.navPanelToggle(href='#navPanel')
+          span.fa.fa-bars
+    section#banner
+      h1= message
+      p= submessage
+    section#one.wrapper
+      .inner
+        .flex.flex-2
+          article
+            if itemList
+              h3 Ingredients
+              table
+                each items in itemList
+                  tr
+                    td= items._id
+    footer#footer
+      .inner
+        .flex
+          .copyright
+            | MongoDB Demo. Design:
+            a(href='https://templated.co') TEMPLATED
+            | . Images:
+            a(href='https://unsplash.com') Unsplash
+            | .
+          ul.icons
+            li
+              a.icon.fa-github(href='https://github.com/jerseyschorr/mongo-101')
+                span.label Github
+            li
+              a.icon.fa-twitter(href='https://twitter.com/JerseySchorr')
+                span.label Twitter
+    script(src='/assets/js/jquery.min.js')
+    script(src='/assets/js/skel.min.js')
+    script(src='/assets/js/util.js')
+    script(src='/assets/js/main.js')

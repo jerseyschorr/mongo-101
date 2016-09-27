@@ -29,3 +29,8 @@ Start the database
 ---------------------
 
 `mongod -port 12345`
+
+Try it out
+----------
+
+### (http://localhost:8080/index.html)

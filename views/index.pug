@@ -18,40 +18,20 @@ html
           span.fa.fa-bars
     section#banner
       h1= message
-      p A free responsive HTML5 website template by TEMPLATED.
+      p= submessage
     section#one.wrapper
       .inner
         .flex.flex-3
-          article
-            header
-              h3
-                | Magna tempus sed amet
-                br
-                |  aliquam veroeros
-            p
-              | Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.
-            footer
-              a.button.special(href='#') More
-          article
-            header
-              h3
-                | Interdum lorem pulvinar
-                br
-                |  adipiscing vitae
-            p
-              | Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.
-            footer
-              a.button.special(href='#') More
-          article
-            header
-              h3
-                | Libero purus magna sapien
-                br
-                |  sed ullamcorper
-            p
-              | Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.
-            footer
-              a.button.special(href='#') More
+          if recipeList
+            each recipe in recipeList.length ? recipeList : [ { recipe_name: 'There are no values' } ]
+              article
+                header
+                  h3= recipe.recipe_name
+                p= recipe.description
+                if recipe._id
+                  footer
+                    a.button.special(href='/recipe/' + recipe._id) More
+
     section#two.wrapper.style1.special
       .inner
         header

@@ -1,0 +1,123 @@
+{
+    "recipe_uuid": "None",
+    "recipe_name": "Banana Bread",
+    "description": "A simple recipe for Banana Bread, but don't give it to Eric, he's allergic.",
+    "author": "Joseph Hall <perlhoser@gmail.com>",
+    "source_url": "None",
+    "source_book": "None",
+    "oven_temp": "350F",
+    "oven_fan": "Off",
+    "bake_time": "50 - 60 minutes",
+    "yields": [{
+        "loaves": 3
+    }],
+    "ingredients": [{
+        "item": "All Purpose Flour",
+        "qty": {
+            "amount": "3 1/2",
+            "unit": "cups"
+        }
+    }, {
+        "item": "Baking Soda",
+        "qty": {
+            "amount": 2,
+            "unit": "tsp"
+        }
+    }, {
+        "item": "Baking Powder",
+        "qty": {
+            "amount": 2,
+            "unit": "tsp"
+        }
+    }, {
+        "item": "Salt",
+        "qty": {
+            "amount": 1,
+            "unit": "tsp"
+        }
+    }, {
+        "item": "Cinnamon, Ground",
+        "qty": {
+            "amount": 2,
+            "unit": "tsp"
+        }
+    }, {
+        "item": "Cloves, Ground",
+        "qty": {
+            "amount": 1,
+            "unit": "tsp"
+        }
+    }, {
+        "item": "Nutmeg, Ground",
+        "qty": {
+            "amount": 1,
+            "unit": "tsp"
+        }
+    }, {
+        "item": "Butter, Unsalted",
+        "qty": {
+            "amount": 1,
+            "unit": "cup"
+        },
+        "notes": [
+            "Melted"
+        ]
+    }, {
+        "item": "Granulated Sugar",
+        "qty": {
+            "amount": "1 1/2",
+            "unit": "cups"
+        }
+    }, {
+        "item": "Bananas",
+        "qty": {
+            "amount": 6,
+            "unit": "each"
+        }
+    }, {
+        "item": "Eggs, Large",
+        "qty": {
+            "amount": 4,
+            "unit": "cups"
+        }
+    }, {
+        "item": "Vanilla Extract",
+        "qty": {
+            "amount": 2,
+            "unit": "tsp"
+        }
+    }, {
+        "item": "Chocolate Chips, Bittersweet",
+        "qty": {
+            "amount": 2,
+            "unit": "cups"
+        },
+        "notes": [
+            "Optional"
+        ]
+    }],
+    "steps": [{
+        "step": "Preheat oven to 350F."
+    }, {
+        "step": "Whisk together the flour, baking soda, baking powder, salt, cinnamon, cloves and nutmeg."
+    }, {
+        "step": "Roughly mash the bananas with a potato masher."
+    }, {
+        "step": "Mix the bananas, melted butter, sugar, eggs and vanilla extract."
+    }, {
+        "step": "Combine the wet ingredients with the dry ingredients."
+    }, {
+        "step": "Mix with a rubber spatula, until just combined. Be careful not to overmix."
+    }, {
+        "step": "Gently fold in the chocolate chips."
+    }, {
+        "step": "Pour into prepared bread pans."
+    }, {
+        "step": "Bake at 350F until a toothpick inserted in the center comes out clean."
+    }],
+    "notes": [
+        "This recipe is designed for high altitude (~4500 ft) baking.",
+        "Other than the chocolate chips, this recipe may serve as a reference recipe for banana bread. Other ingredients may be used in addition to or instead of the chocolate chips, or they may be ommitted entirely.",
+        "Yields three 3 x 4 x 9 loaves."
+    ]
+}

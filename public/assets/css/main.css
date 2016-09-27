@@ -2933,8 +2933,8 @@
 /* Banner */
 
 	#banner {
-		padding: 12em 0 10em 0;
-		background-image: url('../../images/banner.jpg');
+		padding: 6em 0 5em 0;
+		background-image: url('../../images/food.jpg');
 		background-size: cover;
 		background-position: top;
 		background-attachment: fixed;

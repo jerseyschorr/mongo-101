@@ -1,6 +1,6 @@
 'use strict'; // eslint-disable-line strict
 const async = require('async');
-const debug = require('debug')('app');
+const debug = require('debug')('app:server');
 const express = require('express');
 const path = require('path');
 const db = require('./lib/db');
@@ -72,6 +72,36 @@ app.get('/recipe/:id', (req, res) => {
         message: recipe.recipe_name,
         submessage: recipe.description,
         recipeList: recipe,
+      });
+      dbHandle.close();
+    }
+  });
+});
+
+
+/**
+ * Simple route to test the connection and list all recipes
+ * @example http://localhost:8080/index.html
+ */
+app.get('/search.html', (req, res) => {
+  async.waterfall([
+    db.connect,
+    cookbook.listIngredients,
+  ], (err, dbHandle, results) => {
+    if (err) {
+      res.render('search', {
+        title: 'Error',
+        message: 'Danger Will Robinson!',
+        submessage: err,
+        itemList: [],
+      });
+    } else {
+      debug(results);
+      res.render('search', {
+        title: 'MONGO > Search',
+        message: 'Recipes by Ingredients',
+        submessage: '',
+        itemList: results,
       });
       dbHandle.close();
     }

@@ -6,6 +6,9 @@
   "scripts": {
     "start": "DEBUG=app:* node server.js",
     "start-win": "set DEBUG=app:* && node server.js",
+    "load-bread": "DEBUG=app:* node load.js data/bread.json",
+    "load-chicken": "DEBUG=app:* node load.js data/chicken.json",
+    "add-indexes": "DEBUG=app:* node addIndexes.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -3,13 +3,14 @@ mongo-101
 
 # My MongoDB Demo Project
 
-Intro
------
+Prerequisites
+-------------
 
-### Some assumptions:
+#### Some assumptions:
 - You have Node 4 installed. [https://nodejs.org/]
 
-### Install the demo application.
+Install the application
+----------------------------
 
 ```sh
 git clone https://github.com/jerseyschorr/mongo-101
@@ -33,4 +34,4 @@ Start the database
 Try it out
 ----------
 
-### (http://localhost:8080/index.html)
+### [http://localhost:8080/index.html]

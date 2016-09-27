@@ -20,7 +20,7 @@ app.set('view engine', 'pug');
 app.get('/index.html', (req, res) => {
   async.waterfall([
     db.connect,
-    cookbook.readRecipes,
+    cookbook.listAll,
   ], (err, dbHandle, results) => {
     if (err) {
       res.render('index', {
@@ -50,26 +50,28 @@ app.get('/index.html', (req, res) => {
  * @example http://localhost:8080/recipe/<recipe_id>
  */
 app.get('/recipe/:id', (req, res) => {
+  debug(req.params);
   async.waterfall([
     db.connect,
-    cookbook.readRecipes,
+    (dbHandle, cb) => {
+      const rId = (req.params && req.params.id);
+      cookbook.read(dbHandle, rId, cb);
+    },
   ], (err, dbHandle, results) => {
+    debug(results);
     if (err) {
-      res.render('index', {
+      res.render('recipe', {
         title: 'Error',
         message: 'Danger Will Robinson!',
         submessage: err,
-        recipeList: [{
-          recipe_name: 'Database Error',
-          hide_button: true,
-        }],
       });
     } else {
-      res.render('index', {
-        title: 'MONGO',
-        message: 'XXXXXX',
-        submessage: 'Let\'s do Something!',
-        recipeList: results,
+      const recipe = results[0];
+      res.render('recipe', {
+        title: `MONGO > ${recipe.recipe_name}`,
+        message: recipe.recipe_name,
+        submessage: recipe.description,
+        recipeList: recipe,
       });
       dbHandle.close();
     }

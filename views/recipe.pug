@@ -1,6 +1,6 @@
 html
   head
-    title MongoDb Demo
+    title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/assets/css/main.css')
@@ -19,16 +19,26 @@ html
       p= submessage
     section#one.wrapper
       .inner
-        .flex.flex-3
-          if recipeList
-            each recipe in recipeList.length ? recipeList : [ { recipe_name: 'There are no values' } ]
-              article
-                header
-                  h3= recipe.recipe_name
-                p= recipe.description
-                if recipe._id
-                  footer
-                    a.button.special(href='/recipe/' + recipe._id) More
+        .flex.flex-2
+          article
+            if recipeList.ingredients
+              h3 Ingredients
+              table
+                each items in recipeList.ingredients
+                  tr
+                    td
+                      if items.qty
+                        if items.qty.amount
+                          = items.qty.amount + ' '
+                        if items.qty.unit
+                          = items.qty.unit + ' '
+                      = items.item
+                      if items.notes
+          article
+            if recipeList.steps
+              h3 Instructions
+              each s in recipeList.steps
+                p= s.step
     footer#footer
       .inner
         .flex

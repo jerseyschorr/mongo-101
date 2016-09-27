@@ -4,7 +4,8 @@
   "description": "Mongo DB Demo Application",
   "main": "server.js",
   "scripts": {
-    "start": "DEBUG=* node server.js",
+    "start": "DEBUG=app:* node server.js",
+    "start-win": "set DEBUG=app:* && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

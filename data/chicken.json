@@ -1,0 +1,89 @@
+{
+    "recipe_uuid": "None",
+    "recipe_name": "Chicken in Mushroom Sauce",
+    "description": "This flavorful sauce gives the chicken a light, smooth taste, adding a touch of elegance with little effort",
+    "author": "Joseph Hall <perlhoser@gmail.com>",
+    "source_url": "None",
+    "source_book": "Spice and Spirit, pg 234",
+    "oven_temp": "350F",
+    "oven_fan": "Off",
+    "bake_time": "1 1/2 hours",
+    "yields": [{
+        "loaves": 8
+    }],
+    "ingredients": [{
+        "item": "Chicken, 3-pound, quartered",
+        "qty": {
+            "amount": 2
+        }
+    }, {
+        "item": "Oil",
+        "qty": {
+            "amount": "2 to 3",
+            "unit": "Tbsp"
+        }
+    }, {
+        "item": "Onion, large, diced",
+        "qty": {
+            "amount": 1
+        }
+    }, {
+        "item": "Parsley, chopped",
+        "qty": {
+            "amount": 4,
+            "unit": "sprigs"
+        }
+    }, {
+        "item": "Mushrooms, sliced",
+        "qty": {
+            "amount": 1,
+            "unit": "cup"
+        }
+    }, {
+        "item": "Salt",
+        "qty": {
+            "amount": "1/4",
+            "unit": "tsp."
+        }
+    }, {
+        "item": "White Pepper",
+        "qty": {
+            "amount": "1/4",
+            "unit": "tsp."
+        }
+    }, {
+        "item": "Garlic, minced",
+        "qty": {
+            "amount": 2,
+            "unit": "cloves"
+        }
+    }, {
+        "item": "Flour",
+        "qty": {
+            "amount": 2,
+            "unit": "Tbsps."
+        }
+    }, {
+        "item": "Wine, Tokay",
+        "qty": {
+            "amount": 2,
+            "unit": "cups"
+        }
+    }, {
+        "item": "Lemons",
+        "qty": {
+            "amount": 2
+        }
+    }],
+    "steps": [{
+        "step": "Rinse chickens, remove excess fat, and pat dry."
+    }, {
+        "step": "In a 2-quart saucepan, heat oil over medium flame and saute onions, then add parsely, mushrooms, salt, pepper, and garlic. Simmer over low flame for 10 to 15 minutes. Stir in flour and mix well. Add the wine. Cook and stir until mixture has thickened (approximately 5 to 10 minutes)."
+    }, {
+        "step": "Preheat oven to 350F."
+    }, {
+        "step": "Place chicken pieces in roasting pan and pour sauce over chicken. Back covered 1 hour and then remove cover and baken for another 1/2 hour."
+    }, {
+        "step": "Squeeze lemon juice on the chicken while it is still warm."
+    }]
+}

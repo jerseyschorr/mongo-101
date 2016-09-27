@@ -1,3 +1,9 @@
-# mongo-101
+mongo-101
+=========
 
-My MongoDB 
+## My MongoDB Demo Project
+
+### Intro
+
+Some assumptions:
+- You have node setup and running. [https://nodejs.org/]Nodejs.org

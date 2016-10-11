@@ -7,9 +7,9 @@
     "start": "DEBUG=app:* node server.js",
     "db:start": "mongod -port 12345",
     "start-win": "set DEBUG=app:* && node server.js",
-    "load-bread": "DEBUG=app:* node load.js data/bread.json",
-    "load-chicken": "DEBUG=app:* node load.js data/chicken.json",
-    "add-indexes": "DEBUG=app:* node addIndexes.js",
+    "load-bread": "DEBUG=app:* node lib/load.js data/bread.json",
+    "load-chicken": "DEBUG=app:* node lib/load.js data/chicken.json",
+    "add-indexes": "DEBUG=app:* node lib/addIndexes.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,7 +32,7 @@
     "express": "^4.14.0",
     "mongodb": "^2.2.10",
     "pug": "^2.0.0-beta6",
-    "yargs": "^5.0.0"
+    "yargs": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^3.5.0",

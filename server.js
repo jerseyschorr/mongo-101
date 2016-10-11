@@ -1,4 +1,5 @@
-'use strict'; // eslint-disable-line strict
+'use strict'; // eslint-disable-line
+
 const async = require('async');
 const debug = require('debug')('app:server');
 const express = require('express');
@@ -18,6 +19,7 @@ app.set('view engine', 'pug');
  * @example http://localhost:8080/index.html
  */
 app.get('/index.html', (req, res) => {
+  debug('GET /index');
   async.waterfall([
     db.connect,
     cookbook.listAll,
@@ -50,7 +52,7 @@ app.get('/index.html', (req, res) => {
  * @example http://localhost:8080/recipe/<recipe_id>
  */
 app.get('/recipe/:id', (req, res) => {
-  debug(req.params);
+  debug('GET /recipe', req.params);
   async.waterfall([
     db.connect,
     (dbHandle, cb) => {
@@ -58,7 +60,6 @@ app.get('/recipe/:id', (req, res) => {
       cookbook.read(dbHandle, rId, cb);
     },
   ], (err, dbHandle, results) => {
-    debug(results);
     if (err) {
       res.render('recipe', {
         title: 'Error',
@@ -80,10 +81,11 @@ app.get('/recipe/:id', (req, res) => {
 
 
 /**
- * Simple route to test the connection and list all recipes
- * @example http://localhost:8080/index.html
+ * Simple route list all ingredients
+ * @example http://localhost:8080/search.html
  */
 app.get('/search.html', (req, res) => {
+  debug('GET /search');
   async.waterfall([
     db.connect,
     cookbook.listIngredients,
@@ -96,7 +98,6 @@ app.get('/search.html', (req, res) => {
         itemList: [],
       });
     } else {
-      debug(results);
       res.render('search', {
         title: 'MONGO > Search',
         message: 'Recipes by Ingredients',

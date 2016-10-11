@@ -7,7 +7,8 @@ Prerequisites
 -------------
 
 #### Some assumptions:
-- You have Node 4 installed. [https://nodejs.org/]
+- You have Node 4 installed. [https://nodejs.org]
+- MongoDB installed. [https://mongodb.com]
 
 Install the application
 ----------------------------
@@ -26,12 +27,14 @@ On Mac/Linux: `npm run start`
 On Windows: `npm run start-win`
 
 
-Start the database
----------------------
-
-`mongod -port 12345`
 
 Try it out
 ----------
 
 ### [http://localhost:8080/index.html]
+
+
+Start the database
+---------------------
+
+`mongod -port 12345`

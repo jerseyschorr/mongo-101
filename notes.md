@@ -1,23 +1,17 @@
 mongo-101
 =========
 
+
 # Load some data
 
 ```sh
-npm run add-bread
-npm run add-chicken
-```
-
-or
-
-```
-DEBUG=app:* node ./load.js ./data/bread.json
-DEBUG=app:* node ./load.js ./data/chicken.json
+npm run load-bread
+npm run load-chicken
 ```
 
 # Lets add an index
 
-`DEBUG=app:* node ./addIndexes.js`
+`npm run add-indexes`
 
 # Get a list of all ingredients
 
